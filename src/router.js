@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home'
-import Base from './components/base/base'
+import Base from './views/base'
 import News from './views/News'
 import HTML from './views/HTML'
 import vue from './views/Vue'
-
+import Git from './components/base/Git'
 Vue.use(Router)
 
 export default new Router({
@@ -36,6 +36,11 @@ export default new Router({
       path: '/Vue',
       name: 'Vue',
       component: vue
+    },
+    {
+      path: '/Git',
+      name: 'Git',
+      component: Git
     }
   ]
 })
