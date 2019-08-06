@@ -13,7 +13,7 @@
 </template>
 <script>
 export default {
-      name: 'header'
+      name: 'main-header'
     ,
     methods: {
       clickHome: function(){

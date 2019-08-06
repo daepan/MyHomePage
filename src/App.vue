@@ -1,36 +1,50 @@
 <template>
-  <v-app>
-    <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
-    </v-app-bar>
-
-    <v-content>
-      <HelloWorld/>
-    </v-content>
-  </v-app>
+  <div id="app">
+    <main-header />
+		<transition
+			mode="out-in"
+			name="slide-right">
+			<router-view/>
+		</transition>
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
+import Header from '@/components/Header'
 export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-  },
-  data: () => ({
-    //
-  }),
-};
+  name: 'app',
+  components:{
+    'main-header':Header
+  }
+}
 </script>
+
+
+<style >
+ 
+  body {
+    margin: 0px
+  }
+  
+	.slide-left-enter-active,
+	.slide-left-leave-active,
+	.slide-right-enter-active,
+	.slide-right-leave-active {
+		transition-duration: 0.5s;
+		transition-property: height, opacity, transform;
+		transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+		overflow: hidden;
+	}
+
+	.slide-left-enter,
+	.slide-right-leave-active {
+		opacity: 0;
+		transform: translate(2em, 0);
+	}
+
+	.slide-left-leave-active,
+	.slide-right-enter {
+		opacity: 0;
+		transform: translate(-2em, 0);
+	}
+</style>

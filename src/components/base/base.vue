@@ -1,14 +1,15 @@
 <template>
-  <div>
-    <main-header></main-header>
-    Test
-   </div>
+    <div>
+ 
+       
+
+  </div>
 </template>
 <script>
 import Header from '@/components/Header';
 
 export default {
-  name:'base',
+  name:'first',
  components:{
    'main-header': Header
  }
