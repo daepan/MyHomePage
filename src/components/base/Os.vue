@@ -211,11 +211,26 @@
       </v-expansion-panel>
     </v-expansion-panels>
        </div><br>
+       <h1>페이징 교체 알고리즘</h1>
+       <h2>FIFO</h2>
+       <div>테이블</div>
+       <h2>LRU</h2>
+       <div>테읍ㄹ</div>
+       <h2>LFU</h2>
+       <div>테이블</div>
     </div>
 </template>
 <script>
 export default {
     name: 'Os-filed',
+    props:{
+        panel:{
+        type:Object,
+        default: function(){
+            return {}
+        }
+        }
+    },
     data: () => ({
         OsContext:{
             프로세스관리기능 :'중앙처리장치와 프로세스의 상태를 추적및 기억한다. 이를 수행하는 프로그램을 교통량 제어기라 한다.',
@@ -224,10 +239,7 @@ export default {
             정보자원관리기능:'정보의 위치, 상태 등을 추적 관리한다. 또한 어떤 작업에서 정보자원을 사용하도록 할 것인지를 결정하고 정보자원의 할당, 회수 등도 이 기능에서 관리한다.'
         },
         
-    }),
-    methods: {
-     
-  }
+    })
 }
 </script>
 <style>
