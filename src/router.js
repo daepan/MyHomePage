@@ -6,6 +6,10 @@ import News from './views/News'
 import HTML from './views/HTML'
 import vue from './views/Vue'
 import Git from './components/base/Git'
+import Os from './components/base/Os'
+import Algo from './components/base/Algo'
+import dataStr from './components/base/dataStr'
+import ComNet from './components/base/ComNet'
 Vue.use(Router)
 
 export default new Router({
@@ -41,6 +45,26 @@ export default new Router({
       path: '/Git',
       name: 'Git',
       component: Git
+    },
+    {
+      path: '/Os',
+      name: 'Os',
+      component: Os
+    },
+    {
+      path: '/ComNet',
+      name: 'ComNet',
+      component: ComNet
+    },
+    {
+      path: '/Algo',
+      name: 'Algo',
+      component: Algo
+    },
+    {
+      path: '/dataStr',
+      name: 'dataStr',
+      component: dataStr
     }
   ]
 })

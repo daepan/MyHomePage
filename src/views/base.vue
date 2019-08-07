@@ -6,7 +6,7 @@
                 <div class="md-title">협업과 객체지향프로그래밍</div>
               </md-card-header>
               <md-card-content>
-                 Git과 C언어
+                
               </md-card-content>
               <md-card-actions>
                  <md-button 
@@ -18,11 +18,11 @@
                 <div class="md-title">자료구조</div>
               </md-card-header>
               <md-card-content>
-                 Git과 C언어
+               
               </md-card-content>
               <md-card-actions>
                  <md-button 
-                 to="/base">Action</md-button>
+                 to="/dataStr">Action</md-button>
                 </md-card-actions>
             </md-card>
               <md-card>
@@ -30,11 +30,11 @@
                 <div class="md-title">알고리즘</div>
               </md-card-header>
               <md-card-content>
-                 Git과 C언어
+                
               </md-card-content>
               <md-card-actions>
                  <md-button 
-                 to="/base">Action</md-button>
+                 to="/Algo">Action</md-button>
                 </md-card-actions>
             </md-card>
               <md-card>
@@ -42,11 +42,11 @@
                 <div class="md-title">운영체제</div>
               </md-card-header>
               <md-card-content>
-                 Git과 C언어
+               
               </md-card-content>
               <md-card-actions>
                  <md-button 
-                 to="/base">Action</md-button>
+                 to="/Os">Action</md-button>
                 </md-card-actions>
             </md-card>
               <md-card>
@@ -54,11 +54,11 @@
                 <div class="md-title">컴퓨터네트워크</div>
               </md-card-header>
               <md-card-content>
-                 Git과 C언어
+                
               </md-card-content>
               <md-card-actions>
                  <md-button 
-                 to="/base">Action</md-button>
+                 to="/ComNet">Action</md-button>
                 </md-card-actions>
             </md-card>
    </div>
