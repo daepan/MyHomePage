@@ -1,20 +1,29 @@
 <template>
-     <div class="MainHeader">
-      <div class="page-container">
-        <md-tabs class="md-primary" md-alignment="centered" >
-          <md-tab class="md-primary" id="tab-home" md-label="홈" @click="clickHome"></md-tab>
-          <md-tab class="md-primary" id="tab-news" md-label="뉴스" @click="clickNews"></md-tab>
-          <md-tab class="md-primary" id="tab-base" md-label="베이스" @click="clickBase"></md-tab>
-          <md-tab class="md-primary" id="tab-htcss" md-label="HTML/CSS" @click="clickHtml"></md-tab>
-          <md-tab class="md-primary" id="tab-vue" md-label="Vue" @click="clickVue"></md-tab>
-        </md-tabs>
-      </div>
+  <div>
+      <v-card color="todoStudy Hompage">
+        <v-card-title class="text-center justify-center py-5">
+          <h1 class="font-weight-bold display-2 basil--text">KimdaeKwan</h1>
+        </v-card-title>
+    <v-tabs
+      v-model="tab"
+      background-color="transparent"
+      grow
+    >
+    <v-tab class="tab-home" @click="clickHome">HOME</v-tab>
+    <v-tab class="tab-news" @click="clickNews">News</v-tab>
+    <v-tab class="tab-base" @click="clickBase">Base</v-tab>
+    <v-tab class="tab-htcss" @click="clickHtml">HTML/CSS</v-tab>
+    <v-tab class="tab-vue"  @click="clickVue">Vue</v-tab>
+
+   </v-tabs>
+  </v-card>
   </div>
 </template>
 <script>
 export default {
       name: 'main-header'
     ,
+   
     methods: {
       clickHome: function(){
         this.$router.push('/')
@@ -34,4 +43,18 @@ export default {
     }
 }
 </script>
+<style>
+/* Helper classes */
+.basil {
+  background-color: aquamarine !important;
+}
+.basil--text {
+  color: black !important;
+}
+.text-center{
+  padding-bottom: 10px;
+}
+</style>
+
+
 

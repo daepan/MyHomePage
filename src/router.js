@@ -10,6 +10,7 @@ import Os from './components/base/Os'
 import Algo from './components/base/Algo'
 import dataStr from './components/base/dataStr'
 import ComNet from './components/base/ComNet'
+import classBind from './components/Vue/classBind'
 Vue.use(Router)
 
 export default new Router({
@@ -65,6 +66,11 @@ export default new Router({
       path: '/dataStr',
       name: 'dataStr',
       component: dataStr
-    }
+    },
+    {
+      path: '/classBind',
+      name: 'classBind',
+      component: classBind
+    },
   ]
 })
