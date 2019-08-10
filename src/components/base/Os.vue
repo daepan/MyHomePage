@@ -212,12 +212,116 @@
     </v-expansion-panels>
        </div><br>
        <h1>페이징 교체 알고리즘</h1>
+       <br>
        <h2>FIFO</h2>
-       <div>테이블</div>
+       <br>
+        <div class="OsAlgo-content">참조 페이지</div>
+        <div
+          v-for="(value) in OsAlgoTitle " 
+          :key="value"
+          class="OsAlgo-content">
+          {{ value }}
+          </div>
+       <br>
+       <br>
+       <div class="top-title">
+          페이지프레임         
+       </div>
+        <div
+          v-for="(value) in OsAlgoContext1 " 
+          :key="value"
+          class="OsAlgo-content">
+          {{ value }}
+          </div>
+          <br>
+          <br>             
+          <div
+          v-for="(value) in OsAlgoContext2 " 
+          :key="value"
+          class="OsAlgo-content">
+          {{ value }}
+          </div><br><br>
+             <div
+          v-for="(value) in OsAlgoContext3 " 
+          :key="value"
+          class="OsAlgo-content">
+          {{ value }}
+          </div>
+       <br>
+       <br>
+       <br>
+       <br>
        <h2>LRU</h2>
-       <div>테읍ㄹ</div>
+       <div class="OsAlgo-content">참조 페이지</div>
+        <div
+          v-for="(value) in OsAlgoTitle " 
+          :key="value"
+          class="OsAlgo-content">
+          {{ value }}
+          </div>
+          <br>
+          <br>
+           <div class="top-title">
+          페이지프레임         
+       </div>
+        <div
+          v-for="(value) in OsAlgoContext4 " 
+          :key="value"
+          class="OsAlgo-content">
+          {{ value }}
+          </div>
+          <br>
+          <br>             
+          <div
+          v-for="(value) in OsAlgoContext5 " 
+          :key="value"
+          class="OsAlgo-content">
+          {{ value }}
+          </div><br><br>
+             <div
+          v-for="(value) in OsAlgoContext6 " 
+          :key="value"
+          class="OsAlgo-content">
+          {{ value }}
+          </div>
+       <br>
+       <br>
+       <br>
        <h2>LFU</h2>
-       <div>테이블</div>
+       <br>
+         <div class="OsAlgo-content">참조 페이지</div>
+        <div
+          v-for="(value) in OsAlgoTitle " 
+          :key="value"
+          class="OsAlgo-content">
+          {{ value }}
+        </div>
+        <br><br>
+         <div class="top-title">
+          페이지프레임         
+       </div>
+       
+        <div
+          v-for="(value) in OsAlgoContext7 " 
+          :key="value"
+          class="OsAlgo-content">
+          {{ value }}
+          </div>
+          <br>
+          <br>             
+          <div
+          v-for="(value) in OsAlgoContext8 " 
+          :key="value"
+          class="OsAlgo-content">
+          {{ value }}
+          </div><br><br>
+             <div
+          v-for="(value) in OsAlgoContext9 " 
+          :key="value"
+          class="OsAlgo-content">
+          {{ value }}
+          </div>
+       
     </div>
 </template>
 <script>
@@ -238,6 +342,108 @@ export default {
             장치관리기능: '컴퓨터시스템과 연결된 각종 제어장치와 입출력장치와 같은 장치들의 상태를 관리 기억한다. 이를 위한 프로그램으로서 입출력 교통량 제어기가 있다.',
             정보자원관리기능:'정보의 위치, 상태 등을 추적 관리한다. 또한 어떤 작업에서 정보자원을 사용하도록 할 것인지를 결정하고 정보자원의 할당, 회수 등도 이 기능에서 관리한다.'
         },
+        OsAlgoTitle:{
+          title :'2',
+          title1 :'3',
+          title2 :'2',
+          title3 :'1',
+          title4 :'5',
+          title5 :'2',
+          title6 :'3',
+          title8 :'5'
+        
+        },
+        OsAlgoContext1:{
+           title :'2',
+          title1 :'2',
+          title2 :'2',
+          title3 :'2',
+          title4 :'5',
+          title5 :'5',
+          title6 :'5',
+          title8 :'5'
+        },
+        OsAlgoContext2:{
+            title :'--',
+          title1 :'3',
+          title2 :'3',
+          title3 :'3',
+          title4 :'3',
+          title5 :'2',
+          title6 :'2',
+          title8 :'2'
+        },
+           OsAlgoContext3:{
+            title :'--',
+          title1 :'--',
+          title2 :'--',
+          title3 :'1',
+          title4 :'1',
+          title5 :'1',
+          title6 :'3',
+          title8 :'3'
+        },
+          OsAlgoContext4:{
+            title :'2',
+          title1 :'2',
+          title2 :'2',
+          title3 :'2',
+          title4 :'2',
+          title5 :'2',
+          title6 :'2',
+          title8 :'2'
+        },
+          OsAlgoContext5:{
+            title :'--',
+          title1 :'3',
+          title2 :'3',
+          title3 :'3',
+          title4 :'3',
+          title5 :'3',
+          title6 :'3',
+          title8 :'3'
+        },
+          OsAlgoContext6:{
+            title :'--',
+          title1 :'--',
+          title2 :'--',
+          title3 :'3',
+          title4 :'3',
+          title5 :'2',
+          title6 :'2',
+          title8 :'2'
+        },
+          OsAlgoContext7:{
+            title :'--',
+          title1 :'3',
+          title2 :'3',
+          title3 :'3',
+          title4 :'3',
+          title5 :'2',
+          title6 :'2',
+          title8 :'2'
+        },
+          OsAlgoContext8:{
+            title :'--',
+          title1 :'3',
+          title2 :'3',
+          title3 :'3',
+          title4 :'3',
+          title5 :'2',
+          title6 :'2',
+          title8 :'2'
+        },
+          OsAlgoContext9:{
+            title :'--',
+          title1 :'3',
+          title2 :'3',
+          title3 :'3',
+          title4 :'3',
+          title5 :'2',
+          title6 :'2',
+          title8 :'2'
+        },
+        
         
     })
 }
@@ -245,5 +451,20 @@ export default {
 <style>
     .Os-content{
         padding: 100px;
+    }
+    .OsAlgo-content{
+      float: left;
+      border: white solid 2px;
+      padding: 7px;
+      margin: 1px;
+    }
+    .top-title{
+      float: left;
+      padding-right: 2px;
+      padding-left: 2px;
+      padding-top: 50px;
+      padding-bottom: 45px;
+      border: white solid 2px;
+      margin: 1px;
     }
 </style>

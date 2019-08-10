@@ -1,6 +1,6 @@
 <template>
     <div class="Bind-1">
-        <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"static"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">v-bind:class</span>=<span class="string">"&#123; active: isActive, 'text-danger': hasError &#125;"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"static"</span></span></span><br><span class="line"><span class="tag"><span class="attr">v-bind:class</span>=<span class="string">"&#123; active: isActive, 'text-danger': hasError &#125;"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
     </div>
 </template>
 <script>
