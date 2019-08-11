@@ -3,64 +3,41 @@
    <div class="Card-container">
           <md-card class="md-title">
              <md-card-header>
-                <div >협업과 객체지향프로그래밍</div>
+                <div >로그인 페이지</div>
               </md-card-header>
               <md-card-content>
                 
               </md-card-content>
               <md-card-actions>
                  <md-button 
-                 to="/Git">Action</md-button>
+                 to="/login">Action</md-button> 
                 </md-card-actions>
             </md-card>
               <md-card class="md-title">
              <md-card-header>
-                <div >자료구조</div>
+                <div >회원가입페이지</div>
               </md-card-header>
               <md-card-content>
                
               </md-card-content>
               <md-card-actions>
                  <md-button 
-                 to="/dataStr">Action</md-button>
+                 to="/signUp">Action</md-button>
                 </md-card-actions>
             </md-card>
                <md-card class="md-title">
              <md-card-header>
-                <div >알고리즘</div>
+                <div >쿠키와 세션 스토리지</div>
               </md-card-header>
               <md-card-content>
                 
               </md-card-content>
               <md-card-actions>
                  <md-button 
-                 to="/Algo">Action</md-button>
+                 to="/storage">Action</md-button>
                 </md-card-actions>
             </md-card>
-              <md-card class="md-title">
-             <md-card-header>
-                <div >운영체제</div>
-              </md-card-header>
-              <md-card-content>
-               
-              </md-card-content>
-              <md-card-actions>
-                 <md-button 
-                 to="/Os">Action</md-button>
-                </md-card-actions>
-            </md-card>
-               <md-card class="md-title">
-             <md-card-header>
-                <div>컴퓨터네트워크</div>
-              </md-card-header>
-              <md-card-content>
-                
-              </md-card-content>
-              <md-card-actions>
-                 <md-button 
-                 to="/ComNet">Action</md-button>
-                </md-card-actions>
-            </md-card>
+           
    </div>
 
   </div>

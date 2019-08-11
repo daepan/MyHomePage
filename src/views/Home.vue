@@ -7,7 +7,7 @@
             <span class="md-title font-weight-medium font-italic">welcome to my FrontEndpage</span>
       </md-app-toolbar>
     </md-app>
-
+  
 
   </div>
 </template>

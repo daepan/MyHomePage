@@ -1,6 +1,27 @@
 <template>
     <div class="Bind-1">
-        <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"static"</span></span></span><br><span class="line"><span class="tag"><span class="attr">v-bind:class</span>=<span class="string">"&#123; active: isActive, 'text-danger': hasError &#125;"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <figure class="highlight html">
+          <table>
+            <tr>
+              <td class="code">
+          <pre>
+            <span class="line">
+              <span class="tag">
+                &lt;
+                <span class="name">div</span>
+                 <span class="attr">class</span>=
+                 <span class="string">"static"</span>
+                 </span>
+                 </span>
+                 <br>
+                 <span class="line"><span class="tag">
+                   <span class="attr">v-bind:class</span>=
+                   <span class="string">
+                     "&#123; active: isActive, 'text-danger': hasError &#125;"
+                     </span>&gt;</span></span><br><span class="line">
+                       <span class="tag">&lt;/<span class="name">div</span>&gt;
+                       </span></span><br></pre></td></tr></table>
+                       </figure>
     </div>
 </template>
 <script>
@@ -1541,116 +1562,10 @@ ul.demo li {
   font-family: FontAwesome;
   background-color: #42b983;
 }
-.guide-links {
-  margin-top: 2em;
-  height: 1em;
-}
-.footer {
-  color: #7f8c8d;
-  margin-top: 2em;
-  padding-top: 2em;
-  border-top: 1px solid #e5e5e5;
-  font-size: 0.9em;
-}
-#main.fix-sidebar {
-  position: static;
-}
-#main.fix-sidebar .sidebar {
-  position: fixed;
-}
-@media screen and (min-width: 1590px) {
-  #header {
-    background-color: rgba(255,255,255,0.4);
-  }
-}
-@media screen and (max-width: 1300px) {
-  .content.with-sidebar {
-    margin-left: 290px;
-  }
-  #ad {
-    z-index: 1;
-    position: relative;
-    padding: 0;
-    bottom: 0;
-    right: 0;
-    float: right;
-    padding: 0 0 20px 30px;
-  }
-}
-@media screen and (max-width: 900px) {
-  body {
-    -webkit-text-size-adjust: none;
-    font-size: 14px;
-  }
-  #header {
-    display: none;
-  }
-  #logo {
-    display: none;
-  }
-  .nav-link {
-    padding-bottom: 1px;
-  }
-  .nav-link:hover,
-  .nav-link.current {
-    border-bottom: 2px solid #42b983;
-  }
-  #mobile-bar {
-    display: block;
-  }
-  #main {
-    padding: 2em 1.4em 0;
-  }
-  .highlight pre {
-    padding: 1.2em 1em;
-  }
-  .content {
-    padding-left: 0;
-  }
-  .content.with-sidebar {
-    margin: auto;
-  }
-  .content h2:before,
-  .content h3:before {
-    content: "";
-    display: block;
-    margin-top: -70px;
-    height: 70px;
-    visibility: hidden;
-  }
-  .footer {
-    margin-left: 0;
-    text-align: center;
-  }
-}
-@media screen and (max-width: 560px) {
-  #downloads {
-    text-align: center;
-    margin-bottom: 25px;
-  }
-  #downloads .info {
-    margin-top: 5px;
-    margin-left: 0;
-  }
-  iframe {
-    margin: 0 !important;
-  }
-}
-@media print {
-  .footer {
-    display: none;
-  }
-  .content {
-    padding-left: 0px;
-  }
-  .content p {
-    line-height: 1.35em;
-  }
-  .content p.tip {
- 
-    border: 2px solid #e8e8e8;
-    border-left: 4px solid #f66;
-  }
-}
+
+
+
+
+
 
 </style>

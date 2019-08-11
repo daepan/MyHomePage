@@ -11,6 +11,9 @@ import Algo from './components/base/Algo'
 import dataStr from './components/base/dataStr'
 import ComNet from './components/base/ComNet'
 import classBind from './components/Vue/classBind'
+import login from './components/HTML/login'
+import signUp from './components/HTML/signUp'
+import storage from './components/HTML/storage'
 Vue.use(Router)
 
 export default new Router({
@@ -71,6 +74,21 @@ export default new Router({
       path: '/classBind',
       name: 'classBind',
       component: classBind
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: login
+    },
+    {
+      path: '/signUp',
+      name: 'signUp',
+      component: signUp
+    },
+    {
+      path: '/storage',
+      name: 'storage',
+      component: storage
     },
   ]
 })
