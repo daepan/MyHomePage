@@ -14,6 +14,9 @@ import classBind from './components/Vue/classBind'
 import login from './components/HTML/login'
 import signUp from './components/HTML/signUp'
 import storage from './components/HTML/storage'
+import AskView from "./views/AskView.vue";
+import JobsView from "./views/JobsView.vue";
+
 Vue.use(Router)
 
 export default new Router({
@@ -90,5 +93,19 @@ export default new Router({
       name: 'storage',
       component: storage
     },
+    
+  
+    {
+      path: "/ask",
+      name: "ask",
+      component: AskView
+    },
+    {
+      path: "/jobs",
+      name: "jobs",
+      component: JobsView
+    },
+   
+    
   ]
 })

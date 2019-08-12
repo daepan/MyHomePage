@@ -45,26 +45,7 @@
          <br>
         <h2>일반재귀</h2>
          <br>
-         <v-layout
-             align-center
-                justify-center
-             >
-    <v-flex xs12>
-      <v-hover v-slot:default="{ hover }">
-        <v-card
-          :elevation="hover ? 12 : 2"
-          class="mx-auto"
-          height="350"
-          max-width="700"
-        >
-          <v-card-text class="my-4 text-center title">
-
-
-</v-card-text>
-        </v-card>
-      </v-hover>
-    </v-flex>
-  </v-layout>
+       
   <br>
         <h2>동적알고리즘</h2>
         <br>
