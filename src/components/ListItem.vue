@@ -2,7 +2,7 @@
   <div>
     
     <ul class="news-list">
-      <li v-for="item in listItems" class="post" :key="item">
+      <li v-for="item in listItems" class="post" :key="item.id">
         <div class="points">{{ item.points || 0 }}</div>
 
         <div>

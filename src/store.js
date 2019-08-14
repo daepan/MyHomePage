@@ -50,6 +50,8 @@ export default new Vuex.Store({
   FETCH_JOBS({ commit }) {
     fetchJobsList()
       .then(({ data }) => {
+        console.log(data);
+
         commit("SET_JOBS", data);
       })
       .catch(error => {
@@ -59,6 +61,7 @@ export default new Vuex.Store({
   FETCH_ASK(context) {
     fetchAskList()
       .then(response => {
+        console.log(response.data)
         context.commit("SET_ASK", response.data);
       })
       .catch(error => {

@@ -13,6 +13,11 @@
 import Header from '@/components/Header'
 export default {
   name: 'app',
+	data: function(){
+		return {
+			tab:[]
+		}
+	},
   components:{
     'main-header':Header
   }

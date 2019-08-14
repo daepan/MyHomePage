@@ -8,7 +8,6 @@
       </md-app-toolbar>
     </md-app>
   
-
   </div>
 </template>
 
@@ -21,3 +20,9 @@ export default {
   },
 }
 </script>
+<style>
+.video{
+  padding:100px;
+}
+</style>
+
