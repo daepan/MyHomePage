@@ -1,6 +1,7 @@
 <template>
     <div class="storage">
-       
+       <h1></h1>
+       <div class="save-storage">
 <figure class="highlight js">
     <table>
         <tr><td class="code">
@@ -44,20 +45,45 @@
    <span>  function deleteall(){</span><br>
      <span>localStorage.removeItem("name");</span><br><span>sessionStorage.removeItem("name");</span><br><span> }</span><br>
 	 
-
+<br>
+<br>
 
  </pre></td></tr>
             </table>
             </figure>
-        
+        </div>
+        <br>
+        <br>  
+        <br>
+        <div class="storage-save">
+      <input type="text" class="ID" v-model="InputId" placeholder="ID">
+    <button @click="Login">로그인</button>
+    </div>
     </div>
 </template>
+<script src="/node_modules/vue-cookie/build/vue-cookie.js'"></script>
 <script>
 export default {
-    
+    name:'storage',
+    data: function(){
+      return{
+        InputId:''
+      }   
+    },
+    method:{
+      login: function(){
+        if(InputId===''){
+          alert("ID를 입력하시오")
+        }
+      }
+    }
 }
+
 </script>
 <style scoped>
+.save-storage{
+  padding:200px;
+}
 .storage{
     padding-top: 100px;
     padding-right: 15%;
