@@ -8,9 +8,11 @@ import 'vue-material/dist/theme/default-dark.css' // This line here
 import App from './App.vue'
 // Require dependencies
 import VueCookie from'vue-cookie'
+import VueSession from 'vue-session'
 
 Vue.use(VueCookie);
-Vue.use(VueMaterial)
+Vue.use(VueMaterial);
+Vue.use(VueSession);
 
 Vue.config.productionTip = false
 

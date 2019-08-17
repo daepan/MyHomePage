@@ -57,23 +57,28 @@
         <br>
         <div class="storage-save">
       <input type="text" class="ID" v-model="InputId" placeholder="ID">
-    <button @click="Login">로그인</button>
+    <v-btn class="Log-btn" @click="Login()">로그인</v-btn>
     </div>
     </div>
 </template>
-<script src="/node_modules/vue-cookie/build/vue-cookie.js'"></script>
+
 <script>
 export default {
     name:'storage',
-    data: function(){
-      return{
-        InputId:''
-      }   
+    data(){
+        return{
+          InputId:null,
+        }
     },
-    method:{
-      login: function(){
-        if(InputId===''){
+    methods:{
+      Login(){
+        let InputId = this.InputId
+        if(InputId===null){
           alert("ID를 입력하시오")
+        }else{
+          this.$cookie.set('test', this.InputId , 1)
+          localStorage.setItem('test', this.InputId)
+          this.$session.set('test', this.InputId)
         }
       }
     }
@@ -81,8 +86,12 @@ export default {
 
 </script>
 <style scoped>
-.save-storage{
-  padding:200px;
+.Log-btn{
+  margin:4px;
+}
+.ID{
+  border:white 2px solid;
+  padding: 10px;
 }
 .storage{
     padding-top: 100px;
