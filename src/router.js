@@ -3,19 +3,18 @@ import Router from 'vue-router'
 import Home from './views/Home'
 import Base from './views/base'
 import News from './views/News'
-import HTML from './views/HTML'
-import vue from './views/Vue'
+import example from './views/example'
 import Git from './components/base/Git'
 import Os from './components/base/Os'
 import Algo from './components/base/Algo'
 import dataStr from './components/base/dataStr'
 import ComNet from './components/base/ComNet'
 import classBind from './components/Vue/classBind'
-import login from './components/HTML/login'
-import signUp from './components/HTML/signUp'
-import storage from './components/HTML/storage'
-import AskView from "./views/AskView.vue";
-import JobsView from "./views/JobsView.vue";
+import login from './components/Vue/login'
+import signUp from './components/Vue/signUp'
+import storage from './components/Vue/storage'
+import AskView from "./components/News/AskView.vue";
+import JobsView from "./components/News/JobsView.vue";
 
 Vue.use(Router)
 
@@ -33,20 +32,16 @@ export default new Router({
       name: 'news',
       component: News
     },
-    {
-      path: '/HTML',
-      name: 'HTML',
-      component: HTML
-    },
+ 
     {
       path: '/base',
       name: 'base',
       component: Base
     },
     {
-      path: '/Vue',
+      path: '/example',
       name: 'Vue',
-      component: vue
+      component: example
     },
     {
       path: '/Git',

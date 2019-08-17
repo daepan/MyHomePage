@@ -55,7 +55,7 @@
               </md-card-header>
               <md-card-content>
                 
-              </md-card-content>
+              </md-card-content>  
               <md-card-actions>
                  <md-button 
                  to="/ComNet">Action</md-button>

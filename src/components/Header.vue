@@ -12,8 +12,7 @@
     <v-tab class="tab-home" @click="clickHome">HOME</v-tab>
     <v-tab class="tab-news" @click="clickNews">News</v-tab>
     <v-tab class="tab-base" @click="clickBase">Base</v-tab>
-    <v-tab class="tab-htcss" @click="clickHtml">HTML/CSS</v-tab>
-    <v-tab class="tab-vue"  @click="clickVue">Vue</v-tab>
+    <v-tab class="tab-vue"  @click="clickVue">example</v-tab>
 
    </v-tabs>
   </v-card>
@@ -23,7 +22,11 @@
 export default {
       name: 'main-header'
     ,
-   
+     data() {
+            return {
+                tab: [],
+            }
+        },
     methods: {
       clickHome: function(){
         this.$router.push('/')
@@ -34,11 +37,8 @@ export default {
       clickBase: function(){
         this.$router.push('/base')
       },
-      clickHtml: function(){
-        this.$router.push('/HTML')
-      },
       clickVue: function(){
-        this.$router.push('/Vue')
+        this.$router.push('/example')
       }
     }
 }

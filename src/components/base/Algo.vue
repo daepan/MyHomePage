@@ -71,7 +71,5 @@ export default {
     padding:100px;
 
 }
-.mx-auto{
-    
-}
+
 </style>

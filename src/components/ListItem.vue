@@ -2,7 +2,7 @@
   <div>
     
     <ul class="news-list">
-      <li v-for="item in listItems" class="post" :key="item.id">
+      <li v-for="item in listItems" class="post">
         <div class="points">{{ item.points || 0 }}</div>
 
         <div>
@@ -35,11 +35,9 @@ export default {
   created() {
     const name = this.$route.name;
     let actionName = null;
-    if (name === "news") {
-      actionName = "FETCH_NEWS";
-    } else if (name === "ask") {
-      actionName = "FETCH_ASK";
-    } else if (name === "jobs") {
+    if (name === "ask") {
+       actionName = "FETCH_ASK";
+    }else if (name === "jobs") {
       actionName = "FETCH_JOBS";
     }
     this.$store.dispatch(actionName);
@@ -82,6 +80,6 @@ export default {
   margin: 0;
 }
 .link-text {
-  color: #828282;
+  color: #eee;
 }
 </style>

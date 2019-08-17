@@ -1,47 +1,45 @@
 <template>
-    <div >
+    <div>
         <div class="login-html">
+          <h1>로그인 폼 만들기</h1>
+          <br>
+          <li>로그인 폼 예제</li>
 <figure class="highlight html">
     <table>
         <tr><td class="code">
-            <pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="class">class</span>=<span class="string">"login-form"</span></span></span>&gt;<span class="line"><span class="tag"><br>&lt;<span class="tag">div</span> <span class="class">class</span>= <span class="id-put">"Id-input"</span>&gt;<br>   &lt;<span class="tag">label</span> <span class="for">for="loginId"</span>   <span class="class">class="screen_out" </span>&gt;아이디&lt;<span class="tag">/label</span>&gt;
-            &lt;<span class="tag">input</span> <span class="type">type="email"</span> <span class="id">id="loginId"</span><span class="name">name="loginId"</span> <span class="placeholder">placeholder="ID"</span>&gt;&lt;<span class="tag">/input</span>&gt;
-            &lt;<span class="tag">/div</span>&gt;
-           &lt;<span class="tag">div</span> <span class="class">class</span>= <span class="id-put">"Pw-input"</span>&gt;
-            &lt;<span class="tag">label</span> <span class="for">for="loginPw"</span>   <span class="class">class="screen_out" </span>&gt; 비밀번호&lt;<span class="tag">/label</span>&gt;
-            &lt;<span class="tag">input</span> <span class="type">type="password"</span> <span class="id">id="loginPw"</span><span class="name">name="loginPw"</span> <span class="placeholder">placeholder="PW"</span>&gt;&lt;<span class="tag">/input</span>&gt;
+            <pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="class">class</span>=<span class="string">"login-form"</span></span></span>&gt;<span class="line"><span class="tag"><br>&lt;<span class="tag">div</span> <span class="class">class</span>= <span class="string">"Id-input"</span>&gt;<br>   &lt;<span class="tag">label</span> for=<span class="string">"loginId"</span> class=<span class="string">"screen_out"</span>&gt;아이디&lt;<span class="tag">/label</span>&gt;
+      &lt;<span class="tag">input</span> type=<span class="string">"email"</span> id=<span class="string">"loginId"</span> name=<span class="string">"loginId"</span> <span class="placeholder">placeholder=</span><span class="string">"ID"</span>&gt;&lt;<span class="tag">/input</span>&gt;<br>&lt;<span class="tag">/div</span>&gt;
+&lt;<span class="tag">div</span> <span class="class">class</span>= <span class="string">"Pw-input"</span>&gt;
+    &lt;<span class="tag">label</span> for=<span class="string">"loginPw"</span>  class= <span class="string">"screen_out" </span>&gt; 비밀번호&lt;<span class="tag">/label</span>&gt;
+            &lt;<span class="tag">input</span> type=<span class="string">"password"</span> <span class="id">id="loginPw"</span><span class="name">name="loginPw"</span> <span class="placeholder">placeholder="PW"</span>&gt;&lt;<span class="tag">/input</span>&gt;
             &lt;<span class="tag">button</span> <span class="type">type="submit</span><span class="class">class="btn_login"</span> &gt;로그인&lt;<span class="tag">/button</span>&gt;
             <br>&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr>
             </table>
             </figure>
             <br>
             <br>
+          <h3>위와 같은 코드를 작성하여 템플릿을 실행한다면 아래와 같은 결과를 확인 할 수 있다.</h3>
+        
+        <div class="login-form">
+          <div class= "Id-input">
+            <label for="loginId" class="screen_out">아이디</label><br>
+            <input type="email" id="loginId" name="loginId" placeholder="ID">
+          </div>
+          <div class= "Pw-input">
+            <label for="loginPw"  class= "screen_out" > 비밀번호</label><br>
+            <input type="password" id="loginPw" name="loginPw" placeholder="PW">
+            <button type="submit" class="btn-login" >로그인</button>
+        </div>
+            </div>
+       
 
-    <figure class="highlight html">
-      <table>
-        <tr><td class="code">
-          <pre><span class="line">&lt;<span class="tag">form</span> <span class="method">method="post"</span> <span class="action">action="login_check.php</span>&gt;
-          &lt;<span class="tag">div</span>&gt;
-      &lt;<span class="tag">label</span> <span class="for">for="Id"</span><span class="class">class="Id_input" </span>&gt; 비밀번호&lt;<span class="tag">/label</span>&gt;&lt;<span class="tag">/div</span>&gt;</span>
-          &lt;<span class="tag">input</span> <span class="type">type="email"</span> <span class="id">id="loginId"</span> <span class="placeholder">placeholder="ID"</span>&gt;&lt;<span class="tag">/input</span>&gt;
-         &lt;<span class="tag">/div</span>&gt;
-           &lt;<span class="tag">div</span>&gt;
-      &lt;<span class="tag">label</span> <span class="for">for="Pw"</span><span class="class">class="Pw_input" </span>&gt; 비밀번호&lt;<span class="tag">/label</span>&gt;&lt;<span class="tag">/div</span>&gt;
-          &lt;<span class="tag">input</span> <span class="type">type="password"</span> <span class="id">id="loginPw"</span> <span class="placeholder">placeholder="PassWord"</span>&gt;&lt;<span class="tag">/input</span>&gt;
-         &lt;<span class="tag">/div</span>&gt;
-        &lt;<span class="tag">/form</span>&gt;
-        </pre>
-
-                  </td>
-                </tr>
-                </table> 
-
-            </figure>
+     
             <br>
             <br>
             
     </div>
     </div>
+
 
 </template>
 <script>
@@ -50,6 +48,17 @@ export default {
 }
 </script>
 <style>
+.btn-login{
+  padding: 10px;
+  background-color: #2973b7;
+  color:white;
+  float: center;
+}
+.login-form{
+  padding:5px;
+  border: white 2px solid;
+  width: 50%
+}
 .login-html{
     padding-top: 100px;
     padding-right: 15%;
@@ -230,7 +239,7 @@ body {
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #34495e;
+  color: white;
   margin: 0;
 }
 body.docs {
@@ -254,7 +263,7 @@ h3,
 h4,
 strong {
   font-weight: 600;
-  color: #2c3e50;
+  color: white;
 }
 code,
 pre {
@@ -1699,4 +1708,3 @@ ul.demo li {
 }
 
 </style>
-
