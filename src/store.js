@@ -12,6 +12,11 @@ export default new Vuex.Store({
       ask: [],
      
     },
+    allUsers:[
+      {id:1, name:"miamimu" ,email:"qw04011@gmail.com", password:"123456" }
+  ],
+  isLogin: false,
+  isLoginError:false,
  
   },
   getters: { 
@@ -30,7 +35,13 @@ export default new Vuex.Store({
     SET_ASK(state, ask) {
       state.ask = ask;
     },
- 
+    LoginSuccess(state){
+      state.isLogin=true
+    },
+    LoginError(state){
+      state.isLogin=false
+      state.isLoginError=true
+    },
   },
   actions: {
       
@@ -67,6 +78,17 @@ export default new Vuex.Store({
         console.log(error);
       });
   },
- 
+   login({state,commit}, signObj){
+     let selectedUser =null
+     state.allUsers.forEach(user=>{
+       if(user.email === signObj.email) selectedUser=user
+     })
+     selectedUser===null
+     ?commit("LoginError")
+     :selectedUser.password!==signObj.password
+     ?commit("LoginError")
+     :commit("LoginSuccess")
+     
+   }
   }
 })
