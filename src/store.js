@@ -37,6 +37,7 @@ export default new Vuex.Store({
     },
     LoginSuccess(state){
       state.isLogin=true
+      state.isLoginError=false
     },
     LoginError(state){
       state.isLogin=false
@@ -83,9 +84,7 @@ export default new Vuex.Store({
      state.allUsers.forEach(user=>{
        if(user.email === signObj.email) selectedUser=user
      })
-     selectedUser===null
-     ?commit("LoginError")
-     :selectedUser.password!==signObj.password
+     selectedUser===null || selectedUser.password !== signObj.password
      ?commit("LoginError")
      :commit("LoginSuccess")
      

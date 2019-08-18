@@ -13,13 +13,15 @@
     <v-tab class="tab-news" @click="clickNews">News</v-tab>
     <v-tab class="tab-base" @click="clickBase">Base</v-tab>
     <v-tab class="tab-vue"  @click="clickVue">example</v-tab>
-
+    <v-btn flat v-if="isLogin">  myprofile </v-btn>
+    <v-btn flat v-else router :to="{name : 'signIn'}">Sign in</v-btn>
    </v-tabs>
   </v-card>
   
   </div>
 </template>
 <script>
+import {mapState} from 'vuex'
 export default {
       name: 'main-header'
     ,
@@ -27,6 +29,9 @@ export default {
             return {
                 tab: [],
             }
+        },
+        computed:{
+          ...mapState(["isLogin"])
         },
     methods: {
       clickHome: function(){
