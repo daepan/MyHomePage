@@ -15,7 +15,8 @@ import signUp from './components/Vue/signUp'
 import storage from './components/Vue/storage'
 import AskView from "./components/News/AskView.vue";
 import JobsView from "./components/News/JobsView.vue";
-
+import Vueins from "./components/Vue/Vueins"
+import signIn from "./components/SignIn/signIn"
 Vue.use(Router)
 
 export default new Router({
@@ -88,6 +89,17 @@ export default new Router({
       name: 'storage',
       component: storage
     },
+    {
+      path: '/Vueins',
+      name: 'Vueins',
+      component: Vueins
+    },
+    {
+      path: '/signIn',
+      name: 'signIn',
+      component: signIn
+    },
+    
     
   
     {

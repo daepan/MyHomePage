@@ -24,7 +24,7 @@
             </md-card-content>
             <md-card-actions>
                <md-button 
-                 to="/classBind">Action</md-button>
+                 to="/Vueins">Action</md-button>
              </md-card-actions>
           </md-card>
             <md-card class="md-title">
