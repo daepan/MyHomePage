@@ -1,5 +1,6 @@
 <template>
   <div>
+    
       <v-card color="todoStudy Hompage">
         <v-card-title class="text-center justify-center py-5">
           <h1 class="font-weight-bold display-2 basil--text">KimdaeKwan</h1>
@@ -13,12 +14,33 @@
     <v-tab class="tab-news" @click="clickNews">News</v-tab>
     <v-tab class="tab-base" @click="clickBase">Base</v-tab>
     <v-tab class="tab-vue"  @click="clickVue">example</v-tab>
-    <v-btn flat v-if="isLogin">  myprofile </v-btn>
+    
+
+    <v-menu offset-y flat v-if="isLogin">
+           <template v-slot:activator="{ on }">
+        <v-btn
+          slot="activator"
+          color="primary"
+          v-on="on"
+          dark
+        >
+          나의 계정
+        </v-btn>
+          </template>
+      <v-list>
+        <v-list-item>
+           <v-list-item-title>마이페이지</v-list-item-title>
+        </v-list-item>
+       </v-list>
+    </v-menu>
+    
     <v-btn flat v-else router :to="{name : 'signIn'}">Sign in</v-btn>
+   
    </v-tabs>
   </v-card>
-  
+
   </div>
+  
 </template>
 <script>
 import {mapState} from 'vuex'

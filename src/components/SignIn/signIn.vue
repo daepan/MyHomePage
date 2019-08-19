@@ -9,15 +9,16 @@
                 이메일과 비밀번호를 확인해주세요
             </v-alert>
             <v-alert
-            class="mb-3"
+            class="mb-8"
                 :value="isLogin"
                 type="succcess">
                 로그인되었습니다.
             </v-alert>
             <v-card>
-                <v-toolbar flat height="30">
+                <v-toolbar flat height="60">
                     <v-toolbar-title>로그인</v-toolbar-title>
                 </v-toolbar>
+                
                 <div class="pa-8">
             <v-text-field
              v-model="email"
@@ -33,6 +34,7 @@
             >
 
             </v-text-field></div>
+            
             <v-btn 
                 color="blue"
                 large

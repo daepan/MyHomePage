@@ -1,11 +1,14 @@
 <template>
   <div id="app">
+	   <v-app>
     <main-header />
+	
 		<transition
 			mode="out-in"
 			name="slide-right">
 			<router-view/>
 		</transition>
+		</v-app>
 	</div>
 </template>
 
