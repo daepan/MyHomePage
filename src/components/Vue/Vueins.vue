@@ -33,7 +33,7 @@ export default {
     
 }
 </script>
-<style scoped>
+<style>
     .Vue-content{
         padding:100px;
     }

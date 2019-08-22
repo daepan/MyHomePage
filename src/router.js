@@ -17,6 +17,9 @@ import AskView from "./components/News/AskView.vue";
 import JobsView from "./components/News/JobsView.vue";
 import Vueins from "./components/Vue/Vueins"
 import signIn from "./components/SignIn/signIn"
+import startingVue from "./components/Vue/starting"
+import eventhandler from "./components/Vue/eventhandler"
+
 Vue.use(Router)
 
 export default new Router({
@@ -99,7 +102,16 @@ export default new Router({
       name: 'signIn',
       component: signIn
     },
-    
+    {
+      path: '/eventhandler',
+      name: 'eventhandeler',
+      component: eventhandler
+    },
+    {
+      path: '/startingVue',
+      name: 'startingVue',
+      component: startingVue
+    },
     
   
     {

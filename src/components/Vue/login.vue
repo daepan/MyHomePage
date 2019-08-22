@@ -47,7 +47,7 @@ export default {
     
 }
 </script>
-<style>
+<style scoped>
 .btn-login{
   padding: 10px;
   background-color: #2973b7;

@@ -4,14 +4,14 @@
          
           <md-card class="md-title">
              <md-card-header>
-                <div >Vue 클래스 바인딩</div>
+                <div >Vue 시작하기</div>
               </md-card-header>
             <md-card-content>
-                <div>classBind란 무엇인가</div>
+                <div>Vue의 기본예제</div>
             </md-card-content>
             <md-card-actions>
                <md-button 
-                 to="/classBind">Action</md-button>
+                 to="/startingVue">Action</md-button>
              </md-card-actions>
           </md-card>
             
@@ -25,6 +25,18 @@
             <md-card-actions>
                <md-button 
                  to="/Vueins">Action</md-button>
+             </md-card-actions>
+          </md-card>
+           <md-card class="md-title">
+             <md-card-header>
+                <div >Vue eventhandler 예제</div>
+              </md-card-header>
+            <md-card-content>
+                <div>eventhandler의 쓰임</div>
+            </md-card-content>
+            <md-card-actions>
+               <md-button 
+                 to="/eventhandler">Action</md-button>
              </md-card-actions>
           </md-card>
             <md-card class="md-title">
