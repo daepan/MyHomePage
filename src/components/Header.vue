@@ -23,13 +23,17 @@
           color="primary"
           v-on="on"
           dark
+         
         >
           나의 계정
         </v-btn>
           </template>
       <v-list>
-        <v-list-item>
+        <v-list-item router :to= "{name: 'mypage'}">
            <v-list-item-title>마이페이지</v-list-item-title>
+        </v-list-item>
+          <v-list-item>
+           <v-list-item-title>로그아웃</v-list-item-title>
         </v-list-item>
        </v-list>
     </v-menu>

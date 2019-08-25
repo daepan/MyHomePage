@@ -39,7 +39,7 @@
     </p><br>
         <p>    
         <label class="index" for="name">비밀번호 확인</label>
-        <input class="login-form" type="text" id="name">
+        <input class="login-form" type="text" id="name"> 
     </p><br>
     <p>    
         <label class="index" for="name">전화번호</label>
