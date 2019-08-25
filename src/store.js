@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { fetchNewsList, fetchJobsList, fetchAskList} from "@/api/index.js";
+import router from './router';
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    
     state: {
       news: [],
       jobs: [],
@@ -17,6 +19,7 @@ export default new Vuex.Store({
   ],
   isLogin: false,
   isLoginError:false,
+  userInfo:null,
  
   },
   getters: { 
@@ -43,6 +46,11 @@ export default new Vuex.Store({
       state.isLogin=false
       state.isLoginError=true
     },
+    logout(state){
+      state.isLogin =false
+      state.isLoginError=false
+      state.userInfo=null
+    }
   },
   actions: {
       
@@ -84,10 +92,17 @@ export default new Vuex.Store({
      state.allUsers.forEach(user=>{
        if(user.email === signObj.email) selectedUser=user
      })
-     selectedUser===null || selectedUser.password !== signObj.password
-     ?commit("LoginError")
-     :commit("LoginSuccess")
+    if(selectedUser===null || selectedUser.password !== signObj.password)
+     commit("LoginSuccess")
+     else{
+       commit("LoginSuccess", selectedUser)
+       router.push({name : "home"})
+     }
      
+   },
+   logout({commit}){
+     commit("logout")
+     router.push({ name:"home" })
    }
   }
 })
