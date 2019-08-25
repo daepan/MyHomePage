@@ -29,8 +29,13 @@
         </v-btn>
           </template>
       <v-list>
+<<<<<<< HEAD
         <v-list-item router :to= "{name: 'mypage'}">
            <v-list-item-title>마이페이지</v-list-item-title>
+=======
+        <v-list-item>
+           <v-list-item-title to="/">마이페이지</v-list-item-title>
+>>>>>>> 94b65ef6c3f37e0f2faa4827291e10735a031a9c
         </v-list-item>
           <v-list-item>
            <v-list-item-title>로그아웃</v-list-item-title>
