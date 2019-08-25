@@ -19,6 +19,7 @@ import Vueins from "./components/Vue/Vueins"
 import signIn from "./components/SignIn/signIn"
 import startingVue from "./components/Vue/starting"
 import eventhandler from "./components/Vue/eventhandler"
+import myprofile from "./components/mypage/myprofile"
 
 Vue.use(Router)
 
@@ -111,6 +112,11 @@ export default new Router({
       path: '/startingVue',
       name: 'startingVue',
       component: startingVue
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: myprofile
     },
     
   
