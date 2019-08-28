@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import Home from './views/Home'
 import Base from './views/base'
 import News from './views/News'
@@ -23,6 +24,16 @@ import myprofile from "./components/mypage/myprofile"
 
 Vue.use(Router)
 
+const requireAuth = () => (to, from, next) => {
+  let token = localStorage.getItem("id_token")
+  if ( token == 'qw04011@gmail.com') {
+    return next();
+  }
+  console.log("ch")
+  alert("로그인을 해주세요!")
+  next('/signIn');
+};
+
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
@@ -31,11 +42,13 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+      
     },
     {
       path: '/news',
       name: 'news',
       component: News
+      
     },
  
     {
@@ -46,22 +59,26 @@ export default new Router({
     {
       path: '/example',
       name: 'Vue',
-      component: example
+      component: example,
+      beforeEnter: requireAuth()
     },
     {
       path: '/Git',
       name: 'Git',
-      component: Git
+      component: Git,
+      beforeEnter: requireAuth()
     },
     {
       path: '/Os',
       name: 'Os',
-      component: Os
+      component: Os,
+      beforeEnter: requireAuth()
     },
     {
       path: '/ComNet',
       name: 'ComNet',
-      component: ComNet
+      component: ComNet,
+      beforeEnter: requireAuth()
     },
     {
       path: '/Algo',

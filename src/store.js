@@ -3,9 +3,13 @@ import Vuex from 'vuex'
 import { fetchNewsList, fetchJobsList, fetchAskList} from "@/api/index.js";
 import router from './router';
 
+
+
 Vue.use(Vuex)
 
+
 export default new Vuex.Store({
+  
   state: {
     
     state: {
@@ -20,7 +24,7 @@ export default new Vuex.Store({
   isLogin: false,
   isLoginError:false,
   userInfo:null,
- 
+  
   },
   getters: { 
     fetchedAsk(state) {
@@ -41,6 +45,8 @@ export default new Vuex.Store({
     LoginSuccess(state){
       state.isLogin=true
       state.isLoginError=false
+    
+    
     },
     LoginError(state){
       state.isLogin=false
@@ -50,6 +56,7 @@ export default new Vuex.Store({
       state.isLogin =false
       state.isLoginError=false
       state.userInfo=null
+      
     }
   },
   actions: {
@@ -92,17 +99,45 @@ export default new Vuex.Store({
      state.allUsers.forEach(user=>{
        if(user.email === signObj.email) selectedUser=user
      })
-    if(selectedUser===null || selectedUser.password !== signObj.password)
-     commit("LoginSuccess")
+    if(selectedUser===null || selectedUser.password !== signObj.password){
+     commit("LoginError")
+     localStorage.setItem("id_token", signObj.email)
+     localStorage.setItem("pw_token", signObj.password)
+    }
      else{
        commit("LoginSuccess", selectedUser)
+       localStorage.setItem("id_token", signObj.email)
+       localStorage.setItem("pw_token", signObj.password)
        router.push({name : "home"})
      }
      
    },
    logout({commit}){
      commit("logout")
+    localStorage.removeItem("id_token")
+    localStorage.removeItem("pw_token")
      router.push({ name:"home" })
+   },
+   cklogin({state,commit}){
+    console.log('si')
+    let Idtoken = localStorage.getItem("id_token")
+    let Pwtoken = localStorage.getItem("pw_token")
+    let selectedUser =null
+    state.allUsers.forEach(user=>{
+      if(user.email === Idtoken) selectedUser=user
+    })
+   if(selectedUser===null || selectedUser.password !== Pwtoken)
+    commit("LoginError")
+    else{
+      commit("LoginSuccess", selectedUser)
+      console.log('si')
+      router.push({name : "home"})
+    }
    }
+
+
+     
+ 
+   
   }
 })

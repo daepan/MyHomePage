@@ -18,7 +18,11 @@ export default {
   name: 'app',
   components:{
     'main-header':Header
-  }
+  },
+  mounted(){
+    this.$store.dispatch('cklogin')
+  },
+      
 }
 </script>
 

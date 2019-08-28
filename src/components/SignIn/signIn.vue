@@ -51,12 +51,14 @@
 </template>
 <script>
 import { mapState, mapActions } from 'vuex'
+
+
+
 export default {
     data(){
         return{
             email:null,
             password:null,
-           
             isError:false,
             loginSuccess:false
         }
@@ -66,9 +68,12 @@ export default {
         ...mapState(["isLogin","isLoginError"])
     },
     methods:{
-        ...mapActions(['login'])
+        ...mapActions(['login']),
+     
       
-    }
+    },
+      
+      
 }
 </script>
 <style>

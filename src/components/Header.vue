@@ -16,7 +16,7 @@
     <v-tab class="tab-vue"  @click="clickVue">example</v-tab>
     
 
-    <v-menu offset-y flat v-if="isLogin">
+    <v-menu offset-y v-if="isLogin">
            <template v-slot:activator="{ on }">
         <v-btn
           slot="activator"
