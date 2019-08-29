@@ -8,16 +8,19 @@
 			name="slide-right">
 			<router-view/>
 		</transition>
+		
 		</v-app>
 	</div>
 </template>
 
 <script>
 import Header from '@/components/Header'
+import mainSignUp from '@/components/mainSignUp'
 export default {
   name: 'app',
   components:{
-    'main-header':Header
+	'main-header':Header,
+	'main-SignUp':mainSignUp
   },
   mounted(){
     this.$store.dispatch('cklogin')

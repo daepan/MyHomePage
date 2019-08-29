@@ -464,7 +464,7 @@ export default {
     }
     .OsAlgo-content{
       float: left;
-      border: white solid 2px;
+      border: black solid 2px;
       padding: 7px;
       margin: 1px;
     }
@@ -474,7 +474,7 @@ export default {
       padding-left: 2px;
       padding-top: 50px;
       padding-bottom: 45px;
-      border: white solid 2px;
+      border: black solid 2px;
       margin: 1px;
     }
 </style>

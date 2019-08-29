@@ -22,10 +22,7 @@
           slot="activator"
           color="primary"
           v-on="on"
-          dark
-         
-        >
-          나의 계정
+        >나의 계정
         </v-btn>
           </template>
      <v-list>
@@ -40,7 +37,7 @@
         
     </v-menu>
     
-    <v-btn flat v-else router :to="{name : 'signIn'}">Sign in</v-btn>
+    <v-btn text v-else router :to="{name : 'signIn'}">Sign in</v-btn>
    
    </v-tabs>
   </v-card>

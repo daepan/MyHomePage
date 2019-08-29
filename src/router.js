@@ -83,69 +83,82 @@ export default new Router({
     {
       path: '/Algo',
       name: 'Algo',
-      component: Algo
+      component: Algo,
+      beforeEnter: requireAuth()
     },
     {
       path: '/dataStr',
       name: 'dataStr',
-      component: dataStr
+      component: dataStr,
+      beforeEnter: requireAuth()
     },
     {
       path: '/classBind',
       name: 'classBind',
-      component: classBind
+      component: classBind,
+      beforeEnter: requireAuth()
     },
     {
       path: '/login',
       name: 'login',
-      component: login
+      component: login,
+      beforeEnter: requireAuth()
     },
     {
       path: '/signUp',
       name: 'signUp',
-      component: signUp
+      component: signUp,
+      beforeEnter: requireAuth()
     },
     {
       path: '/storage',
       name: 'storage',
-      component: storage
+      component: storage,
+      beforeEnter: requireAuth()
     },
     {
       path: '/Vueins',
       name: 'Vueins',
-      component: Vueins
+      component: Vueins,
+      beforeEnter: requireAuth()
     },
-    {
-      path: '/signIn',
-      name: 'signIn',
-      component: signIn
-    },
+   
     {
       path: '/eventhandler',
       name: 'eventhandeler',
-      component: eventhandler
+      component: eventhandler,
+      beforeEnter: requireAuth()
     },
     {
       path: '/startingVue',
       name: 'startingVue',
-      component: startingVue
+      component: startingVue,
+      beforeEnter: requireAuth()
     },
     {
       path: '/profile',
       name: 'profile',
-      component: myprofile
+      component: myprofile,
+      beforeEnter: requireAuth()
     },
-    
+    {
+      path: '/signIn',
+      name: 'signIn',
+      component: signIn,
+      
+    },
   
     {
       path: "/ask",
       name: "ask",
-      component: AskView
+      component: AskView,
+      beforeEnter: requireAuth()
     },
     {
       path: "/jobs",
       name: "jobs",
-      component: JobsView
+      component: JobsView,
+      beforeEnter: requireAuth()
     },
    
     

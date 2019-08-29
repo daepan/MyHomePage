@@ -274,7 +274,7 @@ body {
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #34495e;
+  color: black;
   margin: 0;
 }
 body.docs {
@@ -321,26 +321,7 @@ em {
 p {
   word-spacing: 0.05em;
 }
-a.button {
-  padding: 0.75em 2em;
-  border-radius: 2em;
-  display: inline-block;
-  color: #fff;
-  background-color: #4fc08d;
-  transition: all 0.15s ease;
-  box-sizing: border-box;
-  border: 1px solid #4fc08d;
-}
-a.button.has-icon {
-  position: relative;
-  text-indent: 1.4em;
-}
-a.button.has-icon > svg {
-  position: absolute;
-  left: 0.4em;
-  top: 0.4em;
-  width: 2em;
-}
+
 a.button.white {
   background-color: #fff;
   color: #42b983;

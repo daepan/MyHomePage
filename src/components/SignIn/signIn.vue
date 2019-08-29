@@ -11,7 +11,7 @@
             <v-alert
             class="mb-8"
                 :value="isLogin"
-                type="succcess">
+                >
                 로그인되었습니다.
             </v-alert>
             <v-card>
@@ -19,21 +19,19 @@
                     <v-toolbar-title>로그인</v-toolbar-title>
                 </v-toolbar>
                 
-                <div class="pa-8">
-            <v-text-field
-             v-model="email"
-       
-            label="이메일을 입력하세요">
-
-
-            </v-text-field>
-            <v-text-field
+            <div class="pa-8">
+                <v-text-field
+                 v-model="email"
+                label="이메일을입력하세요"
+                >
+                </v-text-field>
+                <v-text-field
                 v-model="password"
                 type="password"
-                label="비밀번호를 입력하시오"
-            >
-
-            </v-text-field></div>
+                label="비밀번호를입력하시오"
+                >
+                </v-text-field>
+            </div>
             
             <v-btn 
                 color="blue"
@@ -43,7 +41,9 @@
                 @click="login({
                     email,
                     password})"
-            >로그인</v-btn>
+            >
+            로그인
+            </v-btn>
             </v-card>
         </v-flex>
         </v-layout>
@@ -53,8 +53,10 @@
 import { mapState, mapActions } from 'vuex'
 
 
-
 export default {
+    props:{
+        type:[]
+    },
     data(){
         return{
             email:null,
@@ -62,18 +64,14 @@ export default {
             isError:false,
             loginSuccess:false
         }
-    }
-    ,
+    },
     computed:{
         ...mapState(["isLogin","isLoginError"])
     },
     methods:{
         ...mapActions(['login']),
      
-      
     },
-      
-      
 }
 </script>
 <style>

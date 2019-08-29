@@ -1,6 +1,6 @@
 <template>
     <div>
-        hel fku
+        hel 
     </div>
 </template>
 <script>

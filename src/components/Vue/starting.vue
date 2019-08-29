@@ -14,7 +14,7 @@
   </div>
   <div id="app-4">
     <ol>
-      <li v-for="todo in todos">
+      <li v-for="todo in todos" :key="todo.id">
         {{ todo.text }}
       </li>
     </ol>
