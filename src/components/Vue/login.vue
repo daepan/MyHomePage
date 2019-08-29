@@ -651,7 +651,6 @@ a.button.gray {
     line-height: 1.35em;
   }
   .content p.tip {
- 
     border: 2px solid #e8e8e8;
     border-left: 4px solid #f66;
   }
